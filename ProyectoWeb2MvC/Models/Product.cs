@@ -7,5 +7,7 @@
         public string descripcion { get; set; }
         public decimal precio { get; set; }
         public int stock { get; set; }
+
+        public ICollection<OrderItem> DetallePedidos { get; set; }
     }
 }
