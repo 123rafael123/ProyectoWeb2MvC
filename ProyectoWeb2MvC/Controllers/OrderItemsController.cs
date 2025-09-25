@@ -61,7 +61,7 @@ namespace ProyectoWeb2MvC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,IdPedido,IdProducto,cantidad,subtotal")] OrderItem orderItem)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 _context.Add(orderItem);
                 await _context.SaveChangesAsync();

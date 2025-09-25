@@ -56,7 +56,7 @@ namespace ProyectoWeb2MvC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,nombre,email,password,rol")] User user)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 _context.Add(user);
                 await _context.SaveChangesAsync();

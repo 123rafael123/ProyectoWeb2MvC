@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProyectoWeb2MvC.Data;
 
@@ -11,9 +12,11 @@ using ProyectoWeb2MvC.Data;
 namespace ProyectoWeb2MvC.Migrations
 {
     [DbContext(typeof(PedidosDBContext))]
-    partial class PedidosDBContextModelSnapshot : ModelSnapshot
+    [Migration("20250925032104_Inicital")]
+    partial class Inicital
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
